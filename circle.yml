@@ -9,7 +9,7 @@ machine:
 
 test:
   override:
-    - id
+    - sudo apt-get install nmap --yes
     - sudo pip install https://github.com/nabla-c0d3/sslyze/archive/0.13.4.tar.gz
     - docker info
     - bundle exec rake
