@@ -3,7 +3,7 @@ FROM alpine:3.3
 RUN apk add --update alpine-sdk busybox vim zsh \
   && adduser automation; true \
   && addgroup automation abuild \
-  && echo "automation\tALL=(ALL) ALL" >> /etc/sudoers \
+  && echo "automation ALL=(ALL) ALL" >> /etc/sudoers \
   && rm -rf /var/cache/apk/*
 USER automation
 RUN cd;git clone git://dev.alpinelinux.org/aports \
