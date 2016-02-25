@@ -10,10 +10,8 @@ machine:
 test:
   override:
     - pip install https://github.com/nabla-c0d3/sslyze/archive/0.13.4.tar.gz
-    - bundle install
     - docker info
-    - bundle exec rake build
-    - bundle exec cucumber
+    - bundle exec rake
 
 deployment:
   hub:
